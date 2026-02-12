@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+#top_site{
+    background-color: #990404;
+    color: aliceblue;
+    padding: 20px;
+    text-align: center;
+}
+
+#bt_menu, #label_menu {
+    display: none;
+}
+
+#menu ul{
+    list-style: none;
+    margin-top: 10px;
+}
+
+#menu li{
+    display: inline-block;
+    margin: 0 10px
+}
+
+#menu a{
+    color:#ffc6c6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.titulo_section{
+    text-align: center;
+    margin-top: 30px;
+    color:#4f0101
+}
