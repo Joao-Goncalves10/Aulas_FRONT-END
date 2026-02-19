@@ -16,7 +16,7 @@ body{
 
 #top_site{
     background-color: #990404;
-    color: #feecd7;
+    color: aliceblue;
     padding: 20px;
     text-align: center;
 }
@@ -32,7 +32,7 @@ body{
 
 #menu li{
     display: inline-block;
-    margin: 10px 10px;
+    margin: 0 10px
 }
 
 #menu a{
@@ -65,7 +65,7 @@ body{
     border-radius: 25px;
     padding: 15px;
     text-align: center;
-    background-color: #fffaec;
+    background-image: url(../Aula3_12-02/Exemplo_TechFood/src/Images/DOCES_Bolo_Jabuticaba.png);
     box-shadow: 0px 0px 15px #a96e4e;
     transition: all 0.3s ease;
 }
@@ -89,20 +89,39 @@ body{
 }
 
 .bt_pedido{
-    background: #86401b;
-    color: #feecd7;
-    font-weight: bold;
-    font-size: 1.2rem;
-    border:none;
+    /* Reset de estilos */
+    outline: none;
     cursor: pointer;
-    padding: 12px 16px;
-    border-radius: 50px;
-    transition: all 0.3s ease;
+    border: none;
+  
+  /* Tamanho e Fonte */
+    padding: 15px 40px;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    position: relative;
+  
+  /* O efeito de vidro */
+    background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px);        /* Desfoque do que está atrás */
+    border-radius: 50px;                /* Cantos bem arredondados para o look 'líquido' */
+  
+  /* Bordas e Sombras para profundidade */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),      /* Sombra externa */
+    inset 0 0 10px rgba(255, 255, 255, 0.2),    /* Reflexo interno suave */
+    inset 0 0 2px rgba(255, 255, 255, 0.5);     /* Borda de brilho interna */
+    
+  transition: all 0.4s ease-in-out;
 }
 
 .bt_pedido:hover{
+    background: rgba(255, 255, 255, 0.2);
     transform: scale(1.05);
-    box-shadow: 0px 0px 20px 5px #9b60254d
+    box-shadow: 
+    0 12px 40px 0 rgba(31, 38, 135, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
 /* 5 - Footer ------------------------------------------------------------------------------------------------ */
@@ -113,66 +132,4 @@ body{
     text-align: center;
     margin-top: 40px;
     padding: 20px;
-}
-
-/* 6 - Medias ------------------------------------------------------------------------------------------------- */
-@media screen {
-    #top_site h1 {
-        letter-spacing: 2px;
-    }
-}
-
-@media only screen and (max-width: 400px) {     /* para navegadores antigos ou telas menores */
-    h1{
-        font-size: 1.2rem;
-    }
-}
-
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-    .vitrine_grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 600px), (orientation: portrait) {
-    .vitrine_grid{
-        grid-template-columns: 1fr;
-    }
-    
-    /* Menu Hamburguer */
-    #label_menu{
-        display: block;
-        font-size: 2.5rem;
-        color: #feecd7;
-        cursor: pointer;
-        margin-top: 10px;
-    }
-
-    /* Clique do Botao */
-    #bt_menu:checked ~ #menu ul{
-        display: block;
-        padding: 10px 0;
-    }
-
-    .desc{
-        display: none;
-    }
-
-    #menu li{
-        display: block;
-        margin: 15px 0;
-        border-bottom: 1px solid #a96e4e;
-        padding-bottom: 10px;
-    }
-
-    #menu ul{
-        display: none;
-    }
-}
-
-@media not screen {
-    #menu, .bt_pedido, #label_menu, #bt_menu{
-        display: none;
-    }
-    
 }
