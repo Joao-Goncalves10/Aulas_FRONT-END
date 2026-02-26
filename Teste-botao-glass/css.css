@@ -1,0 +1,135 @@
+/* 1 - Padronização Geral  -------------------------------------------------------------------------------------*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+
+/* 2 - Topo do Site -------------------------------------------------------------------------------------------- */
+
+#top_site{
+    background-color: #990404;
+    color: aliceblue;
+    padding: 20px;
+    text-align: center;
+}
+
+#bt_menu, #label_menu {
+    display: none;
+}
+
+#menu ul{
+    list-style: none;
+    margin-top: 10px;
+}
+
+#menu li{
+    display: inline-block;
+    margin: 0 10px
+}
+
+#menu a{
+    color:#ffc6c6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.titulo_section{
+    text-align: center;
+    margin-top: 30px;
+    color:#4f0101
+}
+
+
+/*                                      AULA DO DIA 19/02/2026                                                 */
+/* 3 - Estrutura Inicial GRID -------------------------------------------------------------------------------- */
+
+.vitrine_grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    padding: 20px;
+}
+
+/* 4 - Estrutura Cards -------------------------------------------------------------------------------------- */
+
+.card{
+    border: none 1px solid;
+    border-radius: 25px;
+    padding: 15px;
+    text-align: center;
+    background-image: url(../Aula3_12-02/Exemplo_TechFood/src/Images/DOCES_Bolo_Jabuticaba.png);
+    box-shadow: 0px 0px 15px #a96e4e;
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    transform: scale(1.009);
+    box-shadow: 0px 0px 20px 8px #9b60254d
+}
+
+.card img{
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.preco{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color:#006303;
+    margin: 10px 0
+}
+
+.bt_pedido{
+    /* Reset de estilos */
+    outline: none;
+    cursor: pointer;
+    border: none;
+  
+  /* Tamanho e Fonte */
+    padding: 15px 40px;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    position: relative;
+  
+  /* O efeito de vidro */
+    background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px);        /* Desfoque do que está atrás */
+    border-radius: 50px;                /* Cantos bem arredondados para o look 'líquido' */
+  
+  /* Bordas e Sombras para profundidade */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),      /* Sombra externa */
+    inset 0 0 10px rgba(255, 255, 255, 0.2),    /* Reflexo interno suave */
+    inset 0 0 2px rgba(255, 255, 255, 0.5);     /* Borda de brilho interna */
+    
+  transition: all 0.4s ease-in-out;
+}
+
+.bt_pedido:hover{
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    box-shadow: 
+    0 12px 40px 0 rgba(31, 38, 135, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* 5 - Footer ------------------------------------------------------------------------------------------------ */
+
+#footer{
+    background-color: #4f0101;
+    color:#feecd7;
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
