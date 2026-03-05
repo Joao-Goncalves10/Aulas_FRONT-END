@@ -31,8 +31,8 @@ if (valorCompra > 150 || temCupom.toLowerCase() === "sim") {
 
 // Exercício 4: Sorteador de Brindes -------------------------------------------------------
 
-const numeroUsuario = prompt("Escolha um número de 1 a 10:");
-const numeroSorteado = Math.floor(Math.random() * 10) + 1;
+const numeroUsuario = number(prompt("Escolha um número de 1 a 10:")); //number para transformar em numero
+const numeroSorteado = Math.floor(Math.random() * 10) + 1; // Math.floor -> arredonda o número para baixo
 
 if (numeroUsuario === numeroSorteado) {
     alert("Parabéns, você ganhou um brinde!");
