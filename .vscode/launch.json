@@ -6,9 +6,9 @@
     "configurations": [
 
         {
-            "type": "msedge",
+            "type": "chrome",
             "request": "launch",
-            "name": "Iniciar o Edge em relação a localhost",
+            "name": "Iniciar Chrome",
             "url": "${file}",
             "webRoot": "${workspaceFolder}"
             
