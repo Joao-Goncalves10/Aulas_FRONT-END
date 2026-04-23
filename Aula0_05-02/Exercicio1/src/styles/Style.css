@@ -1,0 +1,76 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+
+#topo {
+    background-color: #306434;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.link-nav {
+    color: white;
+    font-size: 1.2em;
+    background-color: #36773a;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* ACESSIBILIDADE: Feedback visual para teclado */
+.link-nav:focus, .botao-card:focus {
+    outline: 4px solid #0ff175; /* Amarelo vivo para alto contraste */
+    outline-offset: 2px;
+}
+
+.noticias {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card-noticia {
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    width: 350px;
+    border: 2px solid #2e7d32;
+    border-radius: 20px;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.card-noticia:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px #1b5e20;
+}
+
+.card-noticia img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card-noticia h2 { color: #1b5e20; margin: 10px 0; }
+
+.card-noticia p {
+    color: #333; /* Cinza escuro para melhor contraste */
+    line-height: 1.6; /* Melhor para disléxicos e leitura cognitiva */
+    margin-bottom: 15px;
+}
+
+.botao-card {
+    background-color: #306434;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 10px;
+}

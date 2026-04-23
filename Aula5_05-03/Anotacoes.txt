@@ -1,3 +1,0 @@
-Correção da lista de exercícos passada na última aula.
-
-DOM (Document Object Model) -> 

@@ -1,6 +1,10 @@
 // Exercício 1: Personalizador de Acesso ----------------------------------------------------
 
 const primeiroNome = prompt("Digite seu nome:").trim();
+const conta = (primeiroNome * 5)
+console.log(primeiroNome)
+console.log(conta)
+
 const sobrenome = prompt("Digite seu sobrenome:").trim();
 
 let nomeCompleto = (primeiroNome + " " + sobrenome).trim();

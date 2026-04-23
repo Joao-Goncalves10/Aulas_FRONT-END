@@ -1,0 +1,212 @@
+/* 1 - Padronização Geral  -------------------------------------------------------------------------------------*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+
+/* 2 - Topo do Site -------------------------------------------------------------------------------------------- */
+
+#top_site{
+    background-color: #990404;
+    color: #feecd7;
+    padding: 20px;
+    text-align: center;
+}
+
+#bt_menu, #label_menu {
+    display: none;
+}
+
+#menu ul{
+    list-style: none;
+    margin-top: 10px;
+}
+
+#menu li{
+    display: inline-block;
+    margin: 10px 10px;
+}
+
+#menu a{
+    color:#ffc6c6;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 16px;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+#menu a:hover{
+    background-color: #bb3535;
+    transform: scale(1.05);
+    /* box-shadow: 0px 0px 20px 5px #c9434384 */
+}
+
+
+.titulo_section{
+    text-align: center;
+    margin-top: 50px;
+    color:#4f0101
+}
+
+
+/*                                      AULA DO DIA 19/02/2026                                                 */
+/* 3 - Estrutura Inicial GRID -------------------------------------------------------------------------------- */
+
+.vitrine_grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    padding: 20px;
+}
+
+/* 4 - Estrutura Cards -------------------------------------------------------------------------------------- */
+
+.card{
+    border: none 1px solid;
+    border-radius: 25px;
+    padding: 15px;
+    text-align: end;
+    background-color: #fffaec;
+    box-shadow: 0px 0px 15px #a96e4e;
+    transition: all 0.3s ease;
+}
+
+.card > h3{
+    text-align: start;
+}
+
+.card > p{
+    text-align: start;
+}
+
+.card:hover{
+    transform: scale(1.009);
+    box-shadow: 0px 0px 20px 8px #9b60254d
+}
+
+.card img{
+    max-width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.preco{
+    display: block;
+    font-size: 1.3rem;
+    text-align: start;
+    font-weight: bold;
+    color:#86401b;
+    margin: 15px 12px 5px 0px
+}
+
+.bt_pedido{
+    background: #86401b;
+    color: #feecd7;
+    font-weight: bolder;
+    font-size: 1.6rem;
+    border:none;
+    cursor: pointer;
+    padding: 10px 19px;
+    border-radius: 13px;
+    transition: all 0.3s ease;
+}
+
+.bt_pedido:hover{
+    transform: scale(1.08);
+    background-color: #ad6640;
+    /* box-shadow: 0px 0px 15px 5px #9b602582 */
+}
+
+/* 5 - Footer ------------------------------------------------------------------------------------------------ */
+
+#footer{
+    background-color: #4f0101;
+    color:#feecd7;
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+/* 6 - Medias ------------------------------------------------------------------------------------------------- */
+@media screen {
+    #top_site h1 {
+        letter-spacing: 2px;
+    }
+}
+
+@media only screen and (max-width: 400px) {     /* para navegadores antigos ou telas menores */
+    h1{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .vitrine_grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px), (orientation: portrait) {
+    .vitrine_grid{
+        grid-template-columns: 1fr;
+    }
+    
+    /* Menu Hamburguer */
+    #label_menu{
+        display: block;
+        font-size: 2.5rem;
+        color: #feecd7;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    /* Clique do Botao */
+    #bt_menu:checked ~ #menu ul{
+        display: block;
+        padding: 10px 0;
+    }
+
+    .desc{
+        display: none;
+    }
+
+    #menu li{
+        display: block;
+        margin: 15px 0;
+        border-bottom: 1px solid #a96e4e;
+        padding-bottom: 10px;
+    }
+
+    #menu ul{
+        display: none;
+    }
+}
+
+@media not screen {
+    #menu, .bt_pedido, #label_menu, #bt_menu{
+        display: none;
+    }
+    
+}
+
+/* !important -> se eu preciso sobescrever qualquer linha de alteração (no caso borda) */
+.fora-estoque{
+    background-color: #9c918f !important;
+    transform: scale(1.01);
+    box-shadow: none;
+}
+
+.fora-estoque:hover{
+    box-shadow: none;
+}
